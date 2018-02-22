@@ -5,8 +5,13 @@ data = json.load(open("data.json"))
 
 def return_def(query):
     query = query.lower()
+
     if query in data:
         return(data[query])
+    elif query.capitalize() in data:
+        return(data[query.capitalize()])
+    elif query.upper() in data:
+        return(data[query.upper()])
     elif len(get_close_matches(query, data.keys())) > 0:
         yn = input("Did you mean %s instead?" % get_close_matches(query, data.keys())[0])
         if yn.lower() == "y" or yn.lower() == "yes":
