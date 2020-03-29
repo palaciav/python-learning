@@ -10,7 +10,7 @@ class Ships():
         print(f"{ship_name} is setting sail")
 
     def list(self):
-        ships = ['John B.', 'Yankee Clipper', 'Pequod']
+       `` ships = ['John B.', 'Yankee Clipper', 'Pequod']
         print(f"Ships: {', '.join(ships)}")
 
 def sailors(greeting, name):
